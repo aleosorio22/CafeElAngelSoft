@@ -15,6 +15,18 @@ namespace CafeElAngel
 {
     public partial class AgregarReserva : Form
     {
+        private string[] tipoReserva = {
+            "Carta abierta",
+            "Orden previa"
+        };
+
+        private string[] estadoReserva = {
+            "pendiente",
+            "confirmada",
+            "cancelada"
+        };
+
+
         Reservaciones reservacion = new Reservaciones ();
         ConexionDB conec = new ConexionDB();
 
@@ -80,9 +92,10 @@ namespace CafeElAngel
             }
         }
 
-
-
-
-       
+        private void AgregarReserva_Load(object sender, EventArgs e)
+        {
+            comboBoxTipo.Items.AddRange(tipoReserva);
+            comboBoxEstado.Items.AddRange(estadoReserva);
+        }
     }
 }

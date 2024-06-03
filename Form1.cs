@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CafeElAngel.Data.Models;
+using CafeElAngel.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,9 @@ namespace CafeElAngel
 {
     public partial class Form1 : Form
     {
+
+        DashboardDB conec = new DashboardDB();
+
         public Form1()
         {
             InitializeComponent();
@@ -64,11 +69,16 @@ namespace CafeElAngel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string user = txtUser.Text;
-            string pwd = txtPwd.Text;
+            string email = txtUser.Text;
+            string contraseña = txtPwd.Text;
 
-            if (user == "root" && pwd == "root")
+            ConexionDB conexion = new ConexionDB();
+            Usuario usuario = conec.ValidarUsuario(email, contraseña);
+
+            if (usuario != null)
             {
+                MessageBox.Show("Ingreso exitoso. Bienvenido " + usuario.NombreUsuario);
+                
                 Home main = new Home();
                 main.Show();
                 this.Hide();
@@ -77,8 +87,10 @@ namespace CafeElAngel
             }
             else
             {
-                MessageBox.Show("Usuario o contrasena incorrectos, intente de nuevo");
+                MessageBox.Show("Correo o contraseña incorrectos.");
             }
-        }
+        } 
+          
     }
+
 }

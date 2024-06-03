@@ -339,6 +339,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AgregarReserva";
             this.Text = "AgregarReserva";
+            this.Load += new System.EventHandler(this.AgregarReserva_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroPersonas)).EndInit();

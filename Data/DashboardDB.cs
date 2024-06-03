@@ -1,10 +1,12 @@
-﻿using MySql.Data.MySqlClient;
+﻿using CafeElAngel.Data.Models;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CafeElAngel.Data
 {
@@ -18,6 +20,51 @@ namespace CafeElAngel.Data
         {
             connection = new MySqlConnection(connectionString);
         }
+
+
+        public Usuario ValidarUsuario(string email, string contraseña)
+        {
+            try
+            {
+                string query = "SELECT * FROM usuarios WHERE email = @Email AND contraseña = @Contraseña";
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@Email", email);
+                command.Parameters.AddWithValue("@Contraseña", contraseña);
+
+                connection.Open();
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return new Usuario
+                        {
+                            Id = reader.GetInt32("id"),
+                            NombreUsuario = reader.GetString("nombre_usuario"),
+                            Email = reader.GetString("email"),
+                            Contraseña = reader.GetString("contraseña"),
+                            FechaCreacion = reader.GetDateTime("fecha_creacion"),
+                            Rol = reader.GetString("rol")
+                        };
+                    }
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al validar el usuario: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+
+
 
         public DataTable LeerTablaReservasHoy()
         {
