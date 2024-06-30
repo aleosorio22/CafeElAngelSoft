@@ -129,11 +129,13 @@ namespace CafeElAngel
                 else
                 {
                     MessageBox.Show("Reservación no encontrada.");
+                    txtBuscarIdRes.Text = string.Empty;
                 }
             }
             catch (FormatException)
             {
                 MessageBox.Show("Por favor, introduzca un ID válido.");
+                txtBuscarIdRes.Text = string.Empty;
             }
             catch (Exception ex)
             {
@@ -205,6 +207,24 @@ namespace CafeElAngel
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             BuscarYEliminarReservacionPorId();
+        }
+
+        private void txtBuscarIdRes_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscarIdRes.Text == "Buscar por ID")
+            {
+                txtBuscarIdRes.Text =string.Empty;
+                txtBuscarIdRes.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtBuscarIdRes_Leave(object sender, EventArgs e)
+        {
+            if (txtBuscarIdRes.Text == string.Empty)
+            {
+                txtBuscarIdRes.Text = "Buscar por ID";
+                txtBuscarIdRes.ForeColor = Color.DimGray;
+            }
         }
     }
 }

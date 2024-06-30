@@ -209,12 +209,12 @@
             // 
             // dateTimePickerFechaReservacion
             // 
+            this.dateTimePickerFechaReservacion.Checked = false;
             this.dateTimePickerFechaReservacion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaReservacion.Location = new System.Drawing.Point(119, 217);
             this.dateTimePickerFechaReservacion.Name = "dateTimePickerFechaReservacion";
             this.dateTimePickerFechaReservacion.Size = new System.Drawing.Size(168, 26);
             this.dateTimePickerFechaReservacion.TabIndex = 8;
-            this.dateTimePickerFechaReservacion.Value = new System.DateTime(2024, 5, 28, 0, 52, 6, 0);
             // 
             // txtTomadaPor
             // 
