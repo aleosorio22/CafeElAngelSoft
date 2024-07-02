@@ -9,7 +9,7 @@ namespace CafeElAngel.Data.Models
     internal class Reservaciones
     {
         public int Id { get; set; }
-        public string NombreCliente { get; set; } 
+        public string NombreCliente { get; set; }
         public string EmailCliente { get; set; }
         public string TelefonoCliente { get; set; }
         public DateTime FechaReservacion { get; set; }
@@ -20,7 +20,11 @@ namespace CafeElAngel.Data.Models
         public string Estado { get; set; }
         public DateTime FechaCreacion { get; set; }
         public string TomadaPor { get; set; }
+        public Decimal Anticipo { get; set; }
 
+        public string Pastel {  get; set; }
+        public string Reposteria { get; set; }
+        public string Comida { get; set; }
 
     }
 

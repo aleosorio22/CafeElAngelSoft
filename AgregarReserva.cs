@@ -17,7 +17,7 @@ namespace CafeElAngel
     {
         private string[] tipoReserva = {
             "Carta abierta",
-            "Orden previa"
+            "Previa orden"
         };
 
         private string[] estadoReserva = {
@@ -80,7 +80,23 @@ namespace CafeElAngel
 
             reservacion.FechaCreacion = DateTime.Now;
             reservacion.TomadaPor = txtTomadaPor.Text;
+           
+            //capturar el valor del anticipo
+            if (decimal.TryParse(txtAnticipo.Text, out decimal anticipo))
+            {
+                reservacion.Anticipo = anticipo;
+            }
+            else
+            {
+                MessageBox.Show("Por favor ingrese un valor válido para el anticipo.");
+                return;
+            }
+            reservacion.Pastel = txtPastel.Text;
+            reservacion.Reposteria = txtReposteria.Text;
+            reservacion.Comida = txtComida.Text;
 
+
+            //verificar si se registro con exito
             bool registroExitoso = conec.Insertar(reservacion);
             if (registroExitoso)
             {

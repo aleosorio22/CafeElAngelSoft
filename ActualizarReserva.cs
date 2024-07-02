@@ -45,6 +45,16 @@ namespace CafeElAngel
                 string notas = txtNotas.Text;
                 string estado = comboBoxEstado.Text;
                 string tomadaPor = txtTomadaPor.Text;
+                // Captura del valor de Anticipo
+                if (!decimal.TryParse(txtAnticipo.Text, out decimal anticipo))
+                {
+                    MessageBox.Show("Por favor, introduce un valor válido para el anticipo.");
+                    return;
+                }
+                string pastel = txtPastel.Text;
+                string reposteria = txtReposteria.Text;
+                string comida = txtComida.Text;
+
 
                 // Preguntar si desea actualizar la reservación
                 DialogResult result = MessageBox.Show("¿Estás seguro que deseas actualizar los datos de esta reservación?",
@@ -66,7 +76,11 @@ namespace CafeElAngel
                         Tipo = tipo,
                         Notas = notas,
                         Estado = estado,
-                        TomadaPor = tomadaPor
+                        TomadaPor = tomadaPor,
+                        Anticipo = anticipo,
+                        Pastel = pastel,
+                        Reposteria = reposteria,
+                        Comida = comida
                     };
 
                     bool actualizado = conec.ActualizarReservacion(reservacion);
@@ -113,6 +127,8 @@ namespace CafeElAngel
                     string notas = reservacionEncontrada.Rows[0]["notas"].ToString();
                     string estado = reservacionEncontrada.Rows[0]["estado"].ToString();
                     string tomadaPor = reservacionEncontrada.Rows[0]["tomada_por"].ToString();
+                    double anticipo = double.Parse(reservacionEncontrada.Rows[0]["anticipo"].ToString()); // Obtener el anticipo de la reserva
+
 
                     // Asignar los valores a los controles de tu formulario
                     txtNombreCliente.Text = nombreCliente;
@@ -125,6 +141,7 @@ namespace CafeElAngel
                     txtNotas.Text = notas;
                     comboBoxEstado.Text = estado;
                     txtTomadaPor.Text = tomadaPor;
+                    txtAnticipo.Value = Convert.ToDecimal(anticipo);
                 }
                 else
                 {
@@ -179,6 +196,10 @@ namespace CafeElAngel
                         txtNotas.Clear();
                         comboBoxEstado.Text = "";
                         txtTomadaPor.Text = "";
+                        txtPastel.Text = "";
+                        txtReposteria.Text = "";
+                        txtComida.Text = "";
+                        
                     }
                     else
                     {
@@ -225,6 +246,16 @@ namespace CafeElAngel
                 txtBuscarIdRes.Text = "Buscar por ID";
                 txtBuscarIdRes.ForeColor = Color.DimGray;
             }
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAnticipo_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
