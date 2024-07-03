@@ -81,7 +81,7 @@ namespace CafeElAngel
             reservacion.FechaCreacion = DateTime.Now;
             reservacion.TomadaPor = txtTomadaPor.Text;
            
-            //capturar el valor del anticipo
+            //capturar el valor del anticipo y total
             if (decimal.TryParse(txtAnticipo.Text, out decimal anticipo))
             {
                 reservacion.Anticipo = anticipo;
@@ -91,6 +91,17 @@ namespace CafeElAngel
                 MessageBox.Show("Por favor ingrese un valor válido para el anticipo.");
                 return;
             }
+   
+            if (decimal.TryParse(txtTotal.Text, out decimal total))
+            {
+                reservacion.Total = total;
+            }
+            else
+            {
+                MessageBox.Show("Por favor ingrese un valor válido para el total a pagar.");
+                return;
+            }
+
             reservacion.Pastel = txtPastel.Text;
             reservacion.Reposteria = txtReposteria.Text;
             reservacion.Comida = txtComida.Text;

@@ -26,6 +26,7 @@ namespace CafeElAngel.Data.Models
         public string Reposteria { get; set; }
         public string Comida { get; set; }
 
+        public Decimal Total { get; set; }
     }
 
 }

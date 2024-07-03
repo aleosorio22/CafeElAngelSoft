@@ -26,7 +26,7 @@ namespace CafeElAngel.Data
             {
                 try
                 {
-                    string query = "INSERT INTO reservaciones (nombre_cliente, email_cliente, telefono_cliente, fecha_reservacion, hora_reservacion, numero_personas, tipo, notas, estado, fecha_creacion, tomada_por, anticipo, pastel, reposteria, comida) VALUES (@nombreCliente, @emailCliente, @telefonoCliente, @fechaReservacion, @horaReservacion, @numeroPersonas, @tipo, @notas, @estado, @fechaCreacion, @tomadaPor, @anticipo, @pastel, @reposteria, @comida)";
+                    string query = "INSERT INTO reservaciones (nombre_cliente, email_cliente, telefono_cliente, fecha_reservacion, hora_reservacion, numero_personas, tipo, notas, estado, fecha_creacion, tomada_por, anticipo, total, pastel, reposteria, comida) VALUES (@nombreCliente, @emailCliente, @telefonoCliente, @fechaReservacion, @horaReservacion, @numeroPersonas, @tipo, @notas, @estado, @fechaCreacion, @tomadaPor, @anticipo, @total, @pastel, @reposteria, @comida)";
                     MySqlCommand command = new MySqlCommand(query, connection);
 
                     command.Parameters.AddWithValue("@nombreCliente", reservacion.NombreCliente);
@@ -41,6 +41,7 @@ namespace CafeElAngel.Data
                     command.Parameters.AddWithValue("@fechaCreacion", reservacion.FechaCreacion);
                     command.Parameters.AddWithValue("@tomadaPor", reservacion.TomadaPor);
                     command.Parameters.AddWithValue("@anticipo", reservacion.Anticipo);
+                    command.Parameters.AddWithValue("@total", reservacion.Total);
                     command.Parameters.AddWithValue("@pastel", reservacion.Pastel);
                     command.Parameters.AddWithValue("@reposteria", reservacion.Reposteria);
                     command.Parameters.AddWithValue("@comida", reservacion.Comida);
@@ -142,7 +143,7 @@ namespace CafeElAngel.Data
                 {
                     connection.Open();
 
-                    string sql = "UPDATE reservaciones SET  nombre_cliente = @nombreCliente, email_cliente = @emailCliente, telefono_cliente = @telefonoCliente, fecha_reservacion = @fechaReservacion, hora_reservacion = @horaReservacion, numero_personas = @numeroPersonas, tipo = @tipo, notas = @notas, estado = @estado, tomada_por = @tomadaPor, anticipo = @anticipo, pastel = @pastel, reposteria = @reposteria, comida = @comida, fecha_creacion = CURRENT_TIMESTAMP WHERE id = @id";
+                    string sql = "UPDATE reservaciones SET  nombre_cliente = @nombreCliente, email_cliente = @emailCliente, telefono_cliente = @telefonoCliente, fecha_reservacion = @fechaReservacion, hora_reservacion = @horaReservacion, numero_personas = @numeroPersonas, tipo = @tipo, notas = @notas, estado = @estado, tomada_por = @tomadaPor, anticipo = @anticipo, total = @total, pastel = @pastel, reposteria = @reposteria, comida = @comida, fecha_creacion = CURRENT_TIMESTAMP WHERE id = @id";
                     using (MySqlCommand command = new MySqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@id", reservacion.Id);
@@ -157,6 +158,7 @@ namespace CafeElAngel.Data
                         command.Parameters.AddWithValue("@estado", reservacion.Estado);
                         command.Parameters.AddWithValue("@tomadaPor", reservacion.TomadaPor);
                         command.Parameters.AddWithValue("@anticipo", reservacion.Anticipo);
+                        command.Parameters.AddWithValue("@total", reservacion.Total);
                         command.Parameters.AddWithValue("@pastel", reservacion.Pastel);
                         command.Parameters.AddWithValue("@reposteria", reservacion.Reposteria);
                         command.Parameters.AddWithValue("@comida", reservacion.Comida);

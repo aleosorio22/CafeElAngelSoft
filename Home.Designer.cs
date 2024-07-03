@@ -377,11 +377,12 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(125, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 478);
+            this.panel1.Size = new System.Drawing.Size(799, 478);
             this.panel1.TabIndex = 7;
             // 
             // btnRecargar
             // 
+            this.btnRecargar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRecargar.Image = global::CafeElAngel.Properties.Resources.cargando_flechas;
             this.btnRecargar.Location = new System.Drawing.Point(731, 17);
             this.btnRecargar.Name = "btnRecargar";
@@ -401,18 +402,18 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(43, 88);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(670, 189);
+            this.panel2.Size = new System.Drawing.Size(685, 284);
             this.panel2.TabIndex = 2;
             // 
             // dataGridReservasHoy
             // 
             this.dataGridReservasHoy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridReservasHoy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridReservasHoy.Location = new System.Drawing.Point(29, 59);
+            this.dataGridReservasHoy.Location = new System.Drawing.Point(39, 56);
             this.dataGridReservasHoy.Name = "dataGridReservasHoy";
             this.dataGridReservasHoy.RowHeadersWidth = 62;
             this.dataGridReservasHoy.RowTemplate.Height = 28;
-            this.dataGridReservasHoy.Size = new System.Drawing.Size(601, 93);
+            this.dataGridReservasHoy.Size = new System.Drawing.Size(601, 153);
             this.dataGridReservasHoy.TabIndex = 1;
             // 
             // label2
@@ -431,7 +432,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(305, 20);
+            this.label1.Location = new System.Drawing.Point(312, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 28);
             this.label1.TabIndex = 1;
@@ -442,7 +443,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::CafeElAngel.Properties.Resources.LOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(359, 410);
+            this.pictureBox1.Location = new System.Drawing.Point(366, 410);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -473,10 +474,10 @@
             this.Controls.Add(this.panelSlideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1200, 600);
+            this.MinimumSize = new System.Drawing.Size(1024, 576);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Home";
+            this.Text = "Cafe El Angel";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panelSlideMenu.ResumeLayout(false);
             this.subMenuCuadres.ResumeLayout(false);

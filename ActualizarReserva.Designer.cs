@@ -32,6 +32,12 @@
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtComida = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtReposteria = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtPastel = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtAnticipo = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -59,12 +65,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnActualizarRes = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtComida = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtReposteria = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtPastel = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.NumericUpDown();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panel1.SuspendLayout();
@@ -72,6 +75,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarIdRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroPersonas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -114,6 +118,8 @@
             this.panel1.BackColor = System.Drawing.Color.Snow;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.txtComida);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.txtReposteria);
@@ -148,11 +154,65 @@
             this.panel1.Size = new System.Drawing.Size(951, 517);
             this.panel1.TabIndex = 6;
             // 
+            // txtComida
+            // 
+            this.txtComida.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComida.Location = new System.Drawing.Point(179, 451);
+            this.txtComida.Name = "txtComida";
+            this.txtComida.Size = new System.Drawing.Size(667, 26);
+            this.txtComida.TabIndex = 33;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(45, 455);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(128, 18);
+            this.label15.TabIndex = 32;
+            this.label15.Text = "Comida/Bebida";
+            // 
+            // txtReposteria
+            // 
+            this.txtReposteria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReposteria.Location = new System.Drawing.Point(491, 390);
+            this.txtReposteria.Name = "txtReposteria";
+            this.txtReposteria.Size = new System.Drawing.Size(355, 26);
+            this.txtReposteria.TabIndex = 31;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(383, 394);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(96, 18);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Reposteria";
+            // 
+            // txtPastel
+            // 
+            this.txtPastel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPastel.Location = new System.Drawing.Point(119, 394);
+            this.txtPastel.Name = "txtPastel";
+            this.txtPastel.Size = new System.Drawing.Size(229, 26);
+            this.txtPastel.TabIndex = 29;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(49, 398);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 18);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Pastel";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(297, 339);
+            this.label12.Location = new System.Drawing.Point(598, 338);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 18);
             this.label12.TabIndex = 23;
@@ -162,14 +222,14 @@
             // txtAnticipo
             // 
             this.txtAnticipo.DecimalPlaces = 2;
-            this.txtAnticipo.Location = new System.Drawing.Point(393, 331);
+            this.txtAnticipo.Location = new System.Drawing.Point(690, 331);
             this.txtAnticipo.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.txtAnticipo.Name = "txtAnticipo";
-            this.txtAnticipo.Size = new System.Drawing.Size(176, 26);
+            this.txtAnticipo.Size = new System.Drawing.Size(156, 26);
             this.txtAnticipo.TabIndex = 22;
             this.txtAnticipo.ThousandsSeparator = true;
             this.txtAnticipo.ValueChanged += new System.EventHandler(this.txtAnticipo_ValueChanged);
@@ -190,7 +250,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarIdRes.Image = global::CafeElAngel.Properties.Resources.buscar;
-            this.btnBuscarIdRes.Location = new System.Drawing.Point(593, 14);
+            this.btnBuscarIdRes.Location = new System.Drawing.Point(603, 14);
             this.btnBuscarIdRes.Name = "btnBuscarIdRes";
             this.btnBuscarIdRes.Size = new System.Drawing.Size(44, 37);
             this.btnBuscarIdRes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -206,7 +266,7 @@
             this.txtBuscarIdRes.BackColor = System.Drawing.Color.LightGray;
             this.txtBuscarIdRes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarIdRes.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBuscarIdRes.Location = new System.Drawing.Point(121, 16);
+            this.txtBuscarIdRes.Location = new System.Drawing.Point(131, 16);
             this.txtBuscarIdRes.Name = "txtBuscarIdRes";
             this.txtBuscarIdRes.Size = new System.Drawing.Size(444, 33);
             this.txtBuscarIdRes.TabIndex = 0;
@@ -331,9 +391,9 @@
             // txtTomadaPor
             // 
             this.txtTomadaPor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTomadaPor.Location = new System.Drawing.Point(679, 269);
+            this.txtTomadaPor.Location = new System.Drawing.Point(690, 269);
             this.txtTomadaPor.Name = "txtTomadaPor";
-            this.txtTomadaPor.Size = new System.Drawing.Size(167, 26);
+            this.txtTomadaPor.Size = new System.Drawing.Size(156, 26);
             this.txtTomadaPor.TabIndex = 7;
             // 
             // label5
@@ -406,7 +466,7 @@
             this.btnActualizarRes.BackColor = System.Drawing.Color.LimeGreen;
             this.btnActualizarRes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarRes.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarRes.Location = new System.Drawing.Point(393, 672);
+            this.btnActualizarRes.Location = new System.Drawing.Point(284, 672);
             this.btnActualizarRes.MaximumSize = new System.Drawing.Size(186, 43);
             this.btnActualizarRes.MinimumSize = new System.Drawing.Size(186, 43);
             this.btnActualizarRes.Name = "btnActualizarRes";
@@ -422,7 +482,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.LimeGreen;
             this.btnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(595, 672);
+            this.btnEliminar.Location = new System.Drawing.Point(504, 672);
             this.btnEliminar.MaximumSize = new System.Drawing.Size(186, 43);
             this.btnEliminar.MinimumSize = new System.Drawing.Size(186, 43);
             this.btnEliminar.Name = "btnEliminar";
@@ -432,65 +492,52 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // txtComida
+            // btnImprimir
             // 
-            this.txtComida.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComida.Location = new System.Drawing.Point(179, 451);
-            this.txtComida.Name = "txtComida";
-            this.txtComida.Size = new System.Drawing.Size(667, 26);
-            this.txtComida.TabIndex = 33;
+            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnImprimir.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnImprimir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.Color.White;
+            this.btnImprimir.Location = new System.Drawing.Point(724, 672);
+            this.btnImprimir.MaximumSize = new System.Drawing.Size(186, 43);
+            this.btnImprimir.MinimumSize = new System.Drawing.Size(186, 43);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(186, 43);
+            this.btnImprimir.TabIndex = 9;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click_1);
             // 
-            // label15
+            // label16
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(45, 455);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(128, 18);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "Comida/Bebida";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(316, 336);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(113, 18);
+            this.label16.TabIndex = 35;
+            this.label16.Text = "Total a pagar";
             // 
-            // txtReposteria
+            // txtTotal
             // 
-            this.txtReposteria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReposteria.Location = new System.Drawing.Point(491, 390);
-            this.txtReposteria.Name = "txtReposteria";
-            this.txtReposteria.Size = new System.Drawing.Size(355, 26);
-            this.txtReposteria.TabIndex = 31;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(383, 394);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 18);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "Reposteria";
-            // 
-            // txtPastel
-            // 
-            this.txtPastel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPastel.Location = new System.Drawing.Point(119, 394);
-            this.txtPastel.Name = "txtPastel";
-            this.txtPastel.Size = new System.Drawing.Size(229, 26);
-            this.txtPastel.TabIndex = 29;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(49, 398);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 18);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Pastel";
+            this.txtTotal.DecimalPlaces = 2;
+            this.txtTotal.Location = new System.Drawing.Point(446, 333);
+            this.txtTotal.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(123, 26);
+            this.txtTotal.TabIndex = 34;
+            this.txtTotal.ThousandsSeparator = true;
             // 
             // ActualizarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1206, 793);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizarRes);
             this.Controls.Add(this.panel1);
@@ -508,6 +555,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarIdRes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroPersonas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -551,5 +599,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtPastel;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown txtTotal;
     }
 }

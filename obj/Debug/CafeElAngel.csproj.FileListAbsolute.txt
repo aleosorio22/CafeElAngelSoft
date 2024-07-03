@@ -102,3 +102,6 @@ C:\Users\Alejandro\OneDrive\Escritorio\Ingenieria en Sistemas UMG\TERCER SEMESTR
 C:\Users\Alejandro\OneDrive\Escritorio\Ingenieria en Sistemas UMG\TERCER SEMESTRE\Programacion 1\CafeElAngel\obj\Debug\CafeElAngel.csproj.CopyComplete
 C:\Users\Alejandro\OneDrive\Escritorio\Ingenieria en Sistemas UMG\TERCER SEMESTRE\Programacion 1\CafeElAngel\obj\Debug\CafeElAngelSoft.exe
 C:\Users\Alejandro\OneDrive\Escritorio\Ingenieria en Sistemas UMG\TERCER SEMESTRE\Programacion 1\CafeElAngel\obj\Debug\CafeElAngelSoft.pdb
+C:\Users\Alejandro\OneDrive\Escritorio\Ingenieria en Sistemas UMG\TERCER SEMESTRE\Programacion 1\CafeElAngel\bin\Debug\itextsharp.dll
+C:\Users\Alejandro\OneDrive\Escritorio\Ingenieria en Sistemas UMG\TERCER SEMESTRE\Programacion 1\CafeElAngel\bin\Debug\itextsharp.xml
+C:\Users\Alejandro\OneDrive\Escritorio\Ingenieria en Sistemas UMG\TERCER SEMESTRE\Programacion 1\CafeElAngel\bin\Debug\Resources\LOGO.png

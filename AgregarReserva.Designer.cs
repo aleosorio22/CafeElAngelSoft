@@ -30,6 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtComida = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtReposteria = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtPastel = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtAnticipo = new System.Windows.Forms.NumericUpDown();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
@@ -55,17 +61,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.close = new System.Windows.Forms.PictureBox();
             this.btnRegistrarReserva = new System.Windows.Forms.Button();
-            this.txtPastel = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtReposteria = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtComida = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAnticipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroPersonas)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -87,6 +90,8 @@
             this.panel1.BackColor = System.Drawing.Color.Snow;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.txtComida);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.txtReposteria);
@@ -120,11 +125,65 @@
             this.panel1.Size = new System.Drawing.Size(951, 517);
             this.panel1.TabIndex = 2;
             // 
+            // txtComida
+            // 
+            this.txtComida.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComida.Location = new System.Drawing.Point(179, 398);
+            this.txtComida.Name = "txtComida";
+            this.txtComida.Size = new System.Drawing.Size(667, 26);
+            this.txtComida.TabIndex = 27;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(45, 402);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(128, 18);
+            this.label15.TabIndex = 26;
+            this.label15.Text = "Comida/Bebida";
+            // 
+            // txtReposteria
+            // 
+            this.txtReposteria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReposteria.Location = new System.Drawing.Point(491, 337);
+            this.txtReposteria.Name = "txtReposteria";
+            this.txtReposteria.Size = new System.Drawing.Size(355, 26);
+            this.txtReposteria.TabIndex = 25;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(383, 341);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(96, 18);
+            this.label14.TabIndex = 24;
+            this.label14.Text = "Reposteria";
+            // 
+            // txtPastel
+            // 
+            this.txtPastel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPastel.Location = new System.Drawing.Point(119, 341);
+            this.txtPastel.Name = "txtPastel";
+            this.txtPastel.Size = new System.Drawing.Size(229, 26);
+            this.txtPastel.TabIndex = 23;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(49, 345);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 18);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "Pastel";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(297, 283);
+            this.label12.Location = new System.Drawing.Point(583, 279);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 18);
             this.label12.TabIndex = 21;
@@ -133,14 +192,14 @@
             // txtAnticipo
             // 
             this.txtAnticipo.DecimalPlaces = 2;
-            this.txtAnticipo.Location = new System.Drawing.Point(393, 274);
+            this.txtAnticipo.Location = new System.Drawing.Point(688, 271);
             this.txtAnticipo.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.txtAnticipo.Name = "txtAnticipo";
-            this.txtAnticipo.Size = new System.Drawing.Size(176, 26);
+            this.txtAnticipo.Size = new System.Drawing.Size(152, 26);
             this.txtAnticipo.TabIndex = 20;
             this.txtAnticipo.ThousandsSeparator = true;
             // 
@@ -260,9 +319,9 @@
             // txtTomadaPor
             // 
             this.txtTomadaPor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTomadaPor.Location = new System.Drawing.Point(679, 210);
+            this.txtTomadaPor.Location = new System.Drawing.Point(688, 210);
             this.txtTomadaPor.Name = "txtTomadaPor";
-            this.txtTomadaPor.Size = new System.Drawing.Size(167, 26);
+            this.txtTomadaPor.Size = new System.Drawing.Size(158, 26);
             this.txtTomadaPor.TabIndex = 7;
             this.txtTomadaPor.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -368,59 +427,29 @@
             this.btnRegistrarReserva.UseVisualStyleBackColor = false;
             this.btnRegistrarReserva.Click += new System.EventHandler(this.btnRegistrarReserva_Click);
             // 
-            // txtPastel
+            // label16
             // 
-            this.txtPastel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPastel.Location = new System.Drawing.Point(119, 341);
-            this.txtPastel.Name = "txtPastel";
-            this.txtPastel.Size = new System.Drawing.Size(229, 26);
-            this.txtPastel.TabIndex = 23;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(297, 279);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(113, 18);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "Total a pagar";
             // 
-            // label13
+            // txtTotal
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(49, 345);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 18);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "Pastel";
-            // 
-            // txtReposteria
-            // 
-            this.txtReposteria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReposteria.Location = new System.Drawing.Point(491, 337);
-            this.txtReposteria.Name = "txtReposteria";
-            this.txtReposteria.Size = new System.Drawing.Size(355, 26);
-            this.txtReposteria.TabIndex = 25;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(383, 341);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 18);
-            this.label14.TabIndex = 24;
-            this.label14.Text = "Reposteria";
-            // 
-            // txtComida
-            // 
-            this.txtComida.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComida.Location = new System.Drawing.Point(179, 398);
-            this.txtComida.Name = "txtComida";
-            this.txtComida.Size = new System.Drawing.Size(667, 26);
-            this.txtComida.TabIndex = 27;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(45, 402);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(128, 18);
-            this.label15.TabIndex = 26;
-            this.label15.Text = "Comida/Bebida";
+            this.txtTotal.DecimalPlaces = 2;
+            this.txtTotal.Location = new System.Drawing.Point(440, 271);
+            this.txtTotal.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(129, 26);
+            this.txtTotal.TabIndex = 36;
+            this.txtTotal.ThousandsSeparator = true;
             // 
             // AgregarReserva
             // 
@@ -442,6 +471,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -481,5 +511,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtComida;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown txtTotal;
     }
 }
