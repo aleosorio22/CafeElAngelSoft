@@ -158,7 +158,9 @@ namespace CafeElAngel
                     comboBoxEstado.Text = estado;
                     txtTomadaPor.Text = tomadaPor;
                     txtAnticipo.Value = Convert.ToDecimal(anticipo);
-                    txtTotal.Value = Convert.ToDecimal(total);
+                    txtTotal.Value = reservacionEncontrada.Rows[0]["total"] != DBNull.Value
+                        ? Convert.ToDecimal(reservacionEncontrada.Rows[0]["total"])
+                        : 0;
                     txtPastel.Text = pastel;
                     txtReposteria.Text = reposteria;
                     txtComida.Text = comida;
@@ -280,7 +282,7 @@ namespace CafeElAngel
                 doc.Add(header);
 
                 // Título
-                Paragraph title = new Paragraph("informacion de reservación", fontTicketBold);
+                Paragraph title = new Paragraph("Datos de reservación", fontTicketBold);
                 title.Alignment = Element.ALIGN_CENTER;
                 title.SpacingBefore = 15f;
                 title.SpacingAfter = 15f;
@@ -406,7 +408,7 @@ namespace CafeElAngel
         {
 
         }
-
+        
         private void txtAnticipo_ValueChanged(object sender, EventArgs e)
         {
 
